@@ -1,5 +1,56 @@
-$bgColor: rgb(0, 183, 255);
+@use 'hero';
+@use 'history';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+$corDeFundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundario: #f9f9f9;
+$corBotao: #1755ff;
 
 body {
-    background-color: $bgColor;
+    background-color: $corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+@mixin title($fontSize: 30px) {
+    @include text($fontSize);
+    color: $corTextoSecundario;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text--small {
+    @include text(12px)
+}
+
+.title {
+    @include title;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: $corBotao;
+    color: $corTextoSecundario;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($corBotao, 10%);
+
+    }
 }
