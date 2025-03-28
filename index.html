@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
-    <section class="hero">
-
+    <header class="header">
+        <ul class="header__content">
+            <li class="header__content__item">
+                <a href="#hero1">Inicio</a>
+            </li>
+            <li class="header__content__item">
+                <a href="#history1">Sinopse</a>
+            </li>
+            <li class="header__content__item">
+                <a href="#characterss">Personagens</a>
+            </li>
+        </ul>
+    </header>
+    <section id="hero1" class="hero">
     </section>
-    <section class="history">
+    <section id="history1" class="history">
         <h1 class="title--big">História do filme</h1>
         <div class="history__content">
             <img src="./dist/images/Historia do filme.jpg" alt="Planeta de gelo">
@@ -27,7 +39,7 @@
             </div>
         </div>
     </section>
-    <section class="characters">
+    <section id="characterss" class="characters">
         <h1 class="title--big">Personagens </h1>
         <ul class="characters__list">
             <li class="characters__list__item">
@@ -96,9 +108,15 @@
                 </p>
             </li>
         </ul>
+        <div class="carousel-buttons">
+            <button class="prev">◀</button>
+            <button class="next">▶</button>
+        </div>
     </section>
     <footer class="footer">
         <p class="text--small"> Landing Page criada para fins didáticos e de aprendizado.</p>
     </footer>
+
+    <script src="./dist/js/main.js"></script>
 </body>
 </html
